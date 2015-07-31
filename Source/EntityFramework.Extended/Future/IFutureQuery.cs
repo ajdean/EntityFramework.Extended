@@ -17,6 +17,11 @@ namespace EntityFramework.Future
         bool IsLoaded { get; }
 
         /// <summary>
+        /// Gets a value indicating whether this query should be run with OPTION(RECOMPILE);
+        /// </summary>
+        bool OptionRecompile { get; }
+
+        /// <summary>
         /// Gets the query source to use when materializing.
         /// </summary>
         /// <value>The query source to use when materializing.</value>

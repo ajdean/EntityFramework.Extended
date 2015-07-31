@@ -51,6 +51,15 @@ namespace EntityFramework.Future
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether this query should be run with OPTION(RECOMPILE);
+        /// </summary>
+        public bool OptionRecompile
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Gets or sets the query execute exception. 
         /// </summary>
         /// <value>The query execute exception.</value>      

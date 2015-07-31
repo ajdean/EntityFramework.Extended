@@ -40,6 +40,18 @@ namespace EntityFramework.Extensions
         }
 
         /// <summary>
+        /// Run the future query with OPTION(RECOMPILE)
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public static FutureQuery<TEntity> OptionRecompile<TEntity>(this FutureQuery<TEntity> query)
+        {
+            query.OptionRecompile = true;
+            return query;
+        }
+
+        /// <summary>
         /// Provides for defering the execution of the <paramref name="source" /> query to a batch of future queries.
         /// </summary>
         /// <typeparam name="TEntity">The type of the elements of <paramref name="source" />.</typeparam>

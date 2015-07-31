@@ -108,6 +108,8 @@ namespace EntityFramework.Future
                 futureSql.AppendLine();
 
                 futureSql.Append(sql.Trim());
+                if (futureQuery.OptionRecompile)
+                    futureSql.Append(" OPTION(RECOMPILE)");
                 futureSql.AppendLine(";");
 
                 queryCount++;
